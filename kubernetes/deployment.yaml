@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nodeapp1
+  name: nodeapp1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodeapp1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nodeapp1
+    spec:
+      containers:
+      - image: rutujkc/demo-app:nodejs-4.0
+        name: demo-app
+        resources: {}
+status: {}
